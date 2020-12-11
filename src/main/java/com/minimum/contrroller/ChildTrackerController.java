@@ -1,6 +1,7 @@
 package com.minimum.contrroller;
 
 import com.minimum.local.ActionResult;
+import com.minimum.local.BotTelone;
 import com.minimum.local.PharmacyRequest;
 import com.minimum.local.VehicleResponse;
 import com.minimum.model.ChildTracker;
@@ -46,6 +47,14 @@ public class ChildTrackerController {
     @ApiOperation(value = "", response = Iterable.class)
     @PostMapping("/pharmacy")
     public ResponseEntity<ActionResult> save(@Valid @RequestBody PharmacyRequest pharmacyRequest) {
+        ActionResult result = new ActionResult();
+        result.setMessage("success");
+        return ResponseEntity.ok().body(result);
+    }
+
+    @ApiOperation(value = "", response = Iterable.class)
+    @PostMapping("/telone")
+    public ResponseEntity<ActionResult> save(@Valid @RequestBody BotTelone botTelone) {
         ActionResult result = new ActionResult();
         result.setMessage("success");
         return ResponseEntity.ok().body(result);
