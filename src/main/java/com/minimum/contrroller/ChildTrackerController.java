@@ -54,7 +54,7 @@ public class ChildTrackerController {
 
     @ApiOperation(value = "", response = Iterable.class)
     @PostMapping("/telone")
-    public ResponseEntity<ActionResult> save(@Valid @RequestBody BotTelone botTelone) {
+    public ResponseEntity<ActionResult> saveTelone(@Valid @RequestBody BotTelone botTelone) {
         ActionResult result = new ActionResult();
         result.setMessage("success");
         return ResponseEntity.ok().body(result);
