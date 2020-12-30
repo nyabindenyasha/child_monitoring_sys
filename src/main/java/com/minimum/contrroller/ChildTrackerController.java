@@ -9,6 +9,7 @@ import com.minimum.service.ChildTrackerService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,9 +46,10 @@ public class ChildTrackerController {
 
 
     @ApiOperation(value = "", response = Iterable.class)
-    @PostMapping("/pharmacy")
-    public ResponseEntity<ActionResult> save(@Valid @RequestBody PharmacyRequest pharmacyRequest) {
+    @PostMapping(value = "/pharmacy", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_FORM_URLENCODED_VALUE})
+    public ResponseEntity<ActionResult> savePharmacy(PharmacyRequest pharmacyRequest) {
         ActionResult result = new ActionResult();
+        System.out.println(pharmacyRequest);
         result.setMessage("success");
         return ResponseEntity.ok().body(result);
     }
@@ -56,6 +58,7 @@ public class ChildTrackerController {
     @PostMapping("/telone")
     public ResponseEntity<ActionResult> saveTelone(@Valid @RequestBody BotTelone botTelone) {
         ActionResult result = new ActionResult();
+        System.out.println(botTelone);
         result.setMessage("success");
         return ResponseEntity.ok().body(result);
     }

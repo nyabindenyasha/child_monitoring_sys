@@ -4,7 +4,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-@Component
+//@Component
 public class ScheduledTasks {
 
     @Scheduled(fixedRate = 60000)
