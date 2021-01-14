@@ -20,10 +20,11 @@ import java.util.List;
 @RequestMapping("/featuredAds")
 public class FeaturedAdsController {
 
-    List<FeaturedAds> featuredAdsList = new ArrayList<>();
-
     @GetMapping()
     public List<FeaturedAds> findAll() {
+
+        List<FeaturedAds> featuredAdsList = new ArrayList<>();
+        featuredAdsList.clear();
 
         FeaturedAds featuredAds = new FeaturedAds();
         featuredAds.setId(1);
