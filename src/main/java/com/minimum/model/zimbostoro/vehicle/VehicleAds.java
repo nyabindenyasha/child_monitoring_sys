@@ -1,5 +1,4 @@
-package com.minimum.model;
-
+package com.minimum.model.zimbostoro.vehicle;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 

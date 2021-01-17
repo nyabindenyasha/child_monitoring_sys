@@ -1,6 +1,6 @@
-package com.minimum.local;
+package com.minimum.local.zimbostoro.vehicle;
 
-import com.minimum.model.VehicleAds;
+import com.minimum.model.zimbostoro.vehicle.VehicleAds;
 import lombok.Data;
 
 /**
@@ -31,7 +31,7 @@ public class VehicleAdsList {
     private String thirdPicture;
     private String fourthPicture;
 
-    private boolean is_delivery;
+    private boolean isDelivery;
     private String localp;
     private String location;
     private boolean on_offer;
@@ -62,7 +62,7 @@ public class VehicleAdsList {
         vehicleAdsList.setSecondPicture(vehicleAds.getSecondPicture());
         vehicleAdsList.setThirdPicture(vehicleAds.getThirdPicture());
         vehicleAdsList.setFourthPicture(vehicleAds.getFourthPicture());
-        vehicleAdsList.set_delivery(vehicleAds.is_delivery());
+        vehicleAdsList.setDelivery(vehicleAds.is_delivery());
         vehicleAdsList.setLocalp(vehicleAds.getLocalp());
         vehicleAdsList.setLocation(vehicleAds.getLocation());
         vehicleAdsList.setOn_offer(vehicleAds.isOn_offer());

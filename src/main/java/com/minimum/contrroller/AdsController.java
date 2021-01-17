@@ -1,6 +1,7 @@
 package com.minimum.contrroller;
 
-import com.minimum.local.VehicleAdsList;
+import com.minimum.local.zimbostoro.electronics.ElectronicsAdsList;
+import com.minimum.local.zimbostoro.vehicle.VehicleAdsList;
 import com.minimum.service.AdsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -36,6 +37,18 @@ public class AdsController {
         } catch (Exception exception) {
             Iterable<VehicleAdsList> iterable = null;
             return new ResponseEntity<Iterable<VehicleAdsList>>(iterable, HttpStatus.BAD_GATEWAY);
+        }
+    }
+
+    @ApiOperation(value = "Get Electronics Ads", response = Iterable.class)
+    @GetMapping("/electronics")
+    public ResponseEntity<Iterable<ElectronicsAdsList>> getElectronicsAds() {
+        try {
+            Iterable<ElectronicsAdsList> electronicsAdsLists = adsService.getElectronicsAds();
+            return ResponseEntity.ok().body(electronicsAdsLists);
+        } catch (Exception exception) {
+            Iterable<ElectronicsAdsList> iterable = null;
+            return new ResponseEntity<Iterable<ElectronicsAdsList>>(iterable, HttpStatus.BAD_GATEWAY);
         }
     }
 

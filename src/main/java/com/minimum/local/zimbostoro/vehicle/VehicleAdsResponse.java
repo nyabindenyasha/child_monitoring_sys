@@ -1,6 +1,6 @@
-package com.minimum.local;
+package com.minimum.local.zimbostoro.vehicle;
 
-import com.minimum.model.VehicleAds;
+import com.minimum.model.zimbostoro.vehicle.VehicleAds;
 import lombok.Data;
 
 import java.util.List;
